@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tugas 2 - Persamaan Kuadrat</title>
+</head>
+<body>
+  <form method="post" name="formA">
+    <table>
+      <tr>
+        <td>A</td>
+        <td><input type="text" name="a"></td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td><input type="text" name="b"></td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td><input type="text" name="c"></td>
+      </tr>
+      <tr>
+        <td>X1</td>
+        <td><input type="text" name="x1"></td>
+      </tr>
+      <tr>
+        <td>X2</td>
+        <td><input type="text" name="x2"></td>
+      </tr>
+    </table>
+  </form>
+  <form method="post" name="formB">
+    <input type="submit" value="Hitung" onclick="persamaanKuadrat();">
+    <!-- input type="submit" value="Hitung" onclick="alert('hitung!')" -->
+    <input type="reset" value="Ulangi">
+  </form>
+  <script language="javascript">
+    // function persamaanKuadrat(form) {
+    function persamaanKuadrat() {
+      var form = document.formA;
+      var a = parseFloat(form.a.value);
+      var b = parseFloat(form.b.value);
+      var c = parseFloat(form.c.value);
+      alert('a = ' + a);
+      if ((isNaN(a)) || (isNaN(b)) || (isNaN(c))) {
+        alert('a = ' + a + ' b = ' + b + ' c = ' + c);
+        a = 0; b = 0; c = 0;
+      }
+
+      if ((a == 0) || (b == 0) || (c == 0)) {
+        alert('not equality?');
+      } else {
+        alert('a = ' + a);
+        var d = Math.pow(b, 2) - (4 * a * c);
+        if (d < 0) {
+          alert("d < 0 ; imaginer?");
+        } else if (d > 0) {
+          alert('d > 0' + form.x1.value + ' ' + form.x2.value);
+          form.x1.value = ((- b) + Math.sqrt(d)) / (2 * a);
+          form.x2.value = ((- b) - Math.sqrt(d)) / (2 * a);
+        } else if (d = 0) {
+          alert('d = 0');
+          form.x1.value = (- b) / (2 * a);
+          form.x2.value = form.x1.value;
+        }
+      }
+    }
+  </script>
+</body>
+</html>
