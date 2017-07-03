@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>5e Latihan</title>
+</head>
+<body>
+	<form>
+		Masukkan nomor bulan [1-12] : <input type="text" name="ibulan"/>
+        <input type="button" value="Hitung" onclick="tanyabulan(this.form)"/>
+		<input type="reset" value="Ulang" />
+    </form>
+	<script language="javascript">
+		<!--
+		
+		function tanyabulan(form)
+		{
+			var bulan = parseFloat(form.ibulan.value);
+			var namabulan = " ";
+						
+			switch (bulan)
+			{
+				case 1 : 
+					namabulan = "Januari";
+					break;
+				case 2 : 
+					namabulan = "Februari";
+					break;
+				case 3 : 
+					namabulan = "Maret";
+					break;
+				case 4 : 
+					namabulan = "April";
+					break;
+				case 5 : 
+					namabulan = "Mei";
+					break;
+				case 6 : 
+					namabulan = "Juni";
+					break;
+				case 7 : 
+					namabulan = "Juli";
+					break;
+				case 8 : 
+					namabulan = "Agustus";
+					break;
+				case 9 : 
+					namabulan = "September";
+					break;
+				case 10 : 
+					namabulan = "Oktober";
+					break;
+				case 11 : 
+					namabulan = "November";
+					break;
+				case 12 : 
+					namabulan = "Desember";
+					break;
+				default:
+					namabulan = "Anda salah mengisi";
+					break;
+			}
+			alert(namabulan);
+		}
+		// -->
+	</script>
+</body>
+</html>

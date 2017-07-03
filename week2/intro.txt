@@ -1,0 +1,7 @@
+JavaScript client side script, fungsinya berjalan
+
+Penulisan JS
+1. JS pd HTML yg sama
+<script language="JavaScript"></script>
+2. atau terpisah
+<script src="file.js" />

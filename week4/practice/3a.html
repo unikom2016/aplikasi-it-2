@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Latihan Dengan Objek Text</title>
+</head>
+<body>
+	<script language="javascript">
+		<!--
+			function tekan(form) {
+				var namastr = (form.nama.value);
+				var alamatstr = (form.alamat.value);
+				form.tampil_nama.value = namastr;
+				form.tampil_alamat.value = alamatstr;
+			}
+		-->
+	</script>
+	<form name="form3a">
+    	<h1>Memasukkan Data Dengan Objek Text</h1>
+      	<hr />
+        <pre>
+        	Nama Anda	: <input type="text" size="30" name="nama">
+            Alamat		: <input type="text" size="50" name="alamat">
+        </pre>
+        <input type="button" value="Kirim" onclick="tekan(this.form)">
+        <input type="reset" value="Ulang">    
+    Selamat datang <input type="text" size="30" name="tampil_nama">
+    dari <input type="text" size="50" name="tampil_alamat">
+    </form>
+</body>
+</html>

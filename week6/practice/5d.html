@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>5c Latihan</title>
+</head>
+<body>
+	<form>
+    	<table>
+			<tr>
+                <td>
+                	<h2>Menghitung Indeks Prestasi</h2>
+                </td>
+            </tr>
+            <tr>
+            	<td>
+                	Quis (10%): <input type="text" name="iquis"/>
+              	</td>
+                <td>
+	                Tugas (20%): <input type="text" name="itugas"/>
+              	</td>
+                <td>
+	                UTS (30%): <input type="text" name="iuts"/>
+              	</td>
+                <td>
+                	UAS (40%): <input type="text" name="iuas"/>
+              	</td>
+            </tr>
+            <tr>
+                <input type="button" value="Hitung" onclick="hitungipk(this.form)"/>
+                <input type="reset" value="Ulang" name="bilangan" />
+            </tr>
+            <tr>
+            	Indeks Prestasi : <input type="text" name="oip"/>
+                Keterangan : <input type="text" name="oket"/>
+            </tr>
+        </table>
+    </form>
+	<script language="javascript">
+		<!--
+		function init(form)
+		{
+			var quis = parseFloat(form.iquis.value);
+			var tugas = parseFloat(form.itugas.value);
+			var uts = parseFloat(form.iuts.value);
+			var uas = parseFloat(form.iuas.value);
+			var ip = " ";
+			var ket = " ";
+		}
+		
+		function hitungipk(form)
+		{
+			var quis = parseFloat(form.iquis.value);
+			var tugas = parseFloat(form.itugas.value);
+			var uts = parseFloat(form.iuts.value);
+			var uas = parseFloat(form.iuas.value);
+			var ip = " ";
+			var ket = " ";
+			var bil = parseFloat(form.bilangan.value);
+			var jenis = " ";
+			
+			var na = (0.10 * quis) + (0.20 * tugas) + (0.30 * uts) + (0.40 * uas);
+			
+			if ((na > 80) && (na <= 100))
+			{
+				ip = "A";
+				ket = "Lulus dengan sangat baik";
+			}
+			else if ((na > 68) && (na <= 80))
+			{
+				ip = "B";
+				ket = "Lulus dengan baik";
+			}
+			else if ((na > 55) && (na <= 68))
+			{
+				ip = "C";
+				ket = "Lulus dengan cukup";
+			}
+			else if ((na > 38) && (na <= 55))
+			{
+				ip = "D";
+				ket = "Lulus dengan kurang";
+			}
+			else
+			{
+				ip = "E";
+				ket = "Lulus dengan baik";
+			}
+			
+			form.oip.value = ip;
+			form.oket.value = ket;
+		}
+		// -->
+	</script>
+</body>
+</html>

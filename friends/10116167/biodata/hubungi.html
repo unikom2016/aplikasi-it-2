@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<style>
+			body{
+				background-color:black;
+				color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<form>
+				<table border="0">
+                	<tbody id="table">
+                        <tr id="tombol">
+                            <td colspan=2> <center> <button>Kirim</button> </center> </td>
+                        </tr>
+                    </tbody>
+				</table>
+			</form>
+		</center>
+        <script>
+			var table = document.getElementById("table");
+			var items = ["Nama", "Email", "Subject", "Message"];
+			var tombol = document.getElementById("tombol");
+			for(var i = 0; i < items.length; i++){
+				var row = document.createElement("tr");
+				var col = document.createElement("td");
+				
+				table.appendChild(row);
+				col.innerHTML = items[i];
+				document.write(items[i]);
+				row.appendChild(col);
+				
+				col.innerHTML = "<input type=text />";
+				row.appendChild(col);
+			}
+		</script>        
+	</body>
+</html>

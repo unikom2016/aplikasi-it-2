@@ -1,0 +1,44 @@
+<html>
+
+	<body>
+    	<form>
+        	<h1> Memasukkan Data Dengan Objek Radio </h1>
+            <label>
+            	<input name="jk" type="radio" checked /> Pria
+            </label>
+            <label>
+            	<input name="jk" type="radio" id="wanita" /> Wanita </br>
+            </label>
+            <hr>
+            <p> Pilih nama kota : </p>
+            <label>
+            	<input type="radio" name="kota" id="padang" checked /> Padang 
+            </label> </br>
+            <label>
+            	<input type="radio" name="kota" id="bandung" /> Bandung 
+            </label> </br>
+            <label>
+            	<input type="radio" name="kota" id="yogyakarta" /> Yogyakarta
+            </label> </br>
+            <label>
+            	<input type="radio" name="kota" id="jakarta" /> Jakarta
+            </label> </br> </br>
+        	<input type="button" value="Confirm" onclick="Clicked(this.form)" />
+            <input type="reset" value-"Reset" />
+        </form>
+        
+        <script>
+			function Clicked(form){
+				var jk = form.wanita.checked ? "Wanita" : "Pria";
+				
+				var kota = "Padang";
+				if(form.bandung.checked) kota = "Bandung";
+				if(form.yogyakarta.checked) kota = "Yogyakarta";
+				if(form.jakarta.checked) kota = "Jakarta";
+				
+				alert("Kamu adalah anak gembala " + jk + " yang sedang berkelana ke " + kota + " ya kannnn");
+			}
+		</script>
+    </body>
+
+</html>

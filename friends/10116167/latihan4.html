@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Untitled Document</title>
+    </head>
+    
+	<body>
+    	<center>
+        	<h3>Input A,B,C</h3>
+            <h3>Output X1,X2</h3>
+        </center>
+    	<form>
+        	<table border="0">
+                <p>Nilai A <input type="text" name="a" /> </p>
+                <br />
+                <p>Nilai B  
+                  <input type="text" name="b" />
+                </p>
+                <br />
+                <p>Nilai C <input type="text" name="c" /> </p>
+                <br />
+                <p>Hasilnya X1 <input type="text" name="x1" /> </p>
+                <br />
+                <p>Hasilnya X2 <input type="text" name="x2" /> </p>
+                <br />
+                <input type="button" value="Proses" onclick="hitung(this.form)" />
+                <input type="reset" value="Reset" />
+			</table>
+	</form>
+        
+		<script>
+			var a,b,c;
+			function init(form){
+				a = form.a.value;
+				b = form.b.value;
+				c = form.c.value;
+			}
+		
+			function hitung(form){
+				init(form);
+				var x1 = (-b + Math.sqrt(Math.pow(b,2)-(4*a*c))) / (2*a);
+				var x2 = (-b - Math.sqrt(Math.pow(b,2)-(4*a*c))) / (2*a);
+				form.x1.value = x1;
+				form.x2.value = x2;
+			}
+		</script>
+	</body>
+</html>

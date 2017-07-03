@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Input Bilangan</title>
+</head>
+	<script language="javascript">
+		<!--
+			/* Hasil Operasi */
+			function hasilOperasi(form, kalimat, hasil) {
+				// alert("Hasil " + kalimat + ": " + hasil);
+				form.hasil.value = hasil;
+			}
+			
+			/* Show error log */
+			function errorPrint(data) {
+				alert("Are you sure about your data: " + data);
+			}
+			
+			/* Type-check data */
+			function typeCheck(data) {
+				if (typeof data === "string" || data instanceof String)	{
+					errorPrint(data);
+					return;
+				}
+			}
+			
+			/* Jumlah */
+			function jumlah(form) {
+				typeCheck = document.form.bilangan1.value;
+				var bil1 = parseFloat(document.form.bilangan1.value);
+				console.log("bilangan pertama: " + bil1);
+				if (isNaN (bil1)) {
+					bil1 = 0.0;	
+				}
+				
+				var bil2 = parseFloat(document.form.bilangan2.value);
+				console.log("bilangan kedua: " + bil2);
+				if (isNaN (bil2)) {
+					bil2 = 0.0;	
+				}
+				
+				var hasil = bil1 + bil2;
+				hasilOperasi(form, "Penjumlahan", hasil);
+				return;
+			}
+			
+			/* Kurang */
+			function kurang(form) {
+				var bil1 = parseFloat(document.form.bilangan1.value);
+				console.log("bilangan pertama: " + bil1);
+				if (isNaN (bil1)) {
+					bil1 = 0.0;	
+				}
+				
+				var bil2 = parseFloat(document.form.bilangan2.value);
+				console.log("bilangan kedua: " + bil2);
+				if (isNaN (bil2)) {
+					bil2 = 0.0;	
+				}
+				
+				var hasil = bil1 - bil2;
+				hasilOperasi(form, "Pengurangan", hasil);
+			}
+			
+			/* Kali */
+			function kali(form) {
+				var bil1 = parseFloat(document.form.bilangan1.value);
+				console.log("bilangan pertama: " + bil1);
+				if (isNaN (bil1)) {
+					bil1 = 0.0;	
+				}
+				
+				var bil2 = parseFloat(document.form.bilangan2.value);
+				console.log("bilangan kedua: " + bil2);
+				if (isNaN (bil2)) {
+					bil2 = 0.0;	
+				}
+				
+				var hasil = bil1 * bil2;
+				hasilOperasi(form, "Perkalian", hasil);
+			}
+			
+			/* Bagi */
+			function bagi(form) {
+				var bil1 = parseFloat(document.form.bilangan1.value);
+				console.log("bilangan pertama: " + bil1);
+				if (isNaN (bil1)) {
+					bil1 = 0.0;	
+				}
+				
+				var bil2 = parseFloat(document.form.bilangan2.value);
+				console.log("bilangan kedua: " + bil2);
+				if (isNaN (bil2)) {
+					bil2 = 0.0;	
+				}
+				
+				if (bil2 != 0) {
+					var hasil = bil1 / bil2;
+					hasilOperasi(form, "Pembagian", hasil);
+				} else {
+					alert("Bilangan kedua tidak boleh 0");	
+					return;
+				}
+			}
+		-->
+	</script>
+    
+    <form name="form">
+    	<h1>Silahkan Masukkan Bilangan Melalui Keyboard</h1>
+        <p> Bilangan 1 : <input type="text" size="10" name="bilangan1" /></p>
+        <p> Bilangan 2 : <input type="text" size="10" name="bilangan2" /></p>
+        
+        <input type="button" value="+" onclick="jumlah(this.form)" />
+        <input type="button" value="-" onclick="kurang(this.form)" />
+        <input type="button" value="*" onclick="kali(this.form)" />
+        <input type="button" value="/" onclick="bagi(this.form)" />
+        <input type="reset" value="Ulang"/>
+		<p> Hasil Operasi : <input type="text" size="10" name="hasil" /></p>
+    </form>
+<body>
+</body>
+</html>

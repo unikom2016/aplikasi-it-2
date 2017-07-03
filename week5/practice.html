@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Latihan</title>
+</head>
+<body>
+	<form name="form1" method="post">
+        <table>
+            <tr>
+                <td>Nilai A</td>
+                <td><input type="text" name="a"></td>        
+            </tr>
+            <tr>
+                <td>Nilai B</td>
+                <td><input type="text" name="b"></td>       
+            </tr>
+            <tr>
+                <td>Nilai C</td>
+                <td><input type="text" name="c"></td>        
+            </tr>
+            <tr>
+                <td>Hasilnya X1</td>
+                <td><input type="text" name="x1"></td>
+            </tr>
+            <tr>
+                <td>Hasilnya X2</td>
+                <td><input type="text" name="x2"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Proses" onclick="persamaanKuadrat(this.form.a.value, this.form.b.value, this.form.c.value)"  />
+        <input type="reset" value="Reset" />
+    </form>
+	<script language="javascript">
+		function persamaanKuadrat(a, b, c) {
+			var d = Math.pow(b, 2) - (4 * a * c);
+			if (d < 0) {
+			  alert("d < 0<br>Nilai x1 dan x2 adalah imaginer");
+			} else if (d > 0) {
+			  rumusA = - b - ((Math.sqrt(d)) / (2 * a));
+			  rumusB = - b + ((Math.sqrt(d)) / (2 * a));
+			  alert("d > 0<br>d  : " + d + "<br>x1 : " + rumusA + "<br>x2 : " + rumusB );
+			  document.form1.x1.value = rumusA;
+			  document.form1.x2.value = rumusB;
+			} else {
+			  rumusA = Math.ceil(-b / (2 * a));
+			  rumusB = Math.ceil(b / (2 * a))
+			  alert("d = 0<br>d  : " + d + "<br>x1 : " + rumusA + "<br>x2 : " + rumusB );
+			  document.form1.x1.value = rumusA;
+			  document.form1.x2.value = rumusB;
+			}
+		}
+	</script>
+</body>
+</html>

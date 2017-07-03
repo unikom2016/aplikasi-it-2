@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>5b Latihan - If Else Condition</title>
+</head>
+<body>
+	<script language="javascript">
+		<!--
+		function tanyabilangan(form)
+		{
+			var bil = parseFloat(document.fform.bilangan.value);
+			console.log(bil);
+			var jenis = " ";
+			console.log("bil is not a number: " + isNaN(bil));
+			if (isNaN(bil))
+			{
+				alert("Anda belum memasukkan Bilangan");
+			}
+			else
+			{
+				if (bil > 0)
+				{
+					jenis = "Adalah bilangan positif"
+				}
+				else if (bil < 0)
+				{
+					jenis = "Adalah bilangan negatif"
+				}
+				else
+				{
+					jenis = " Adalah Nol";
+				}
+			}
+			
+			alert(bil + " " + jenis);
+		}
+		// -->
+	</script>
+	<form name="fform">
+    	<h2>
+	        Bilangan Negatif, Nol, atau Positif ???
+        </h2>
+        Masukkan Bilangan :<input type="text" size="11" name="bilangan" />
+        
+        <p>
+        	<input type="button" value="Tanya" onclick="tanyabilangan(this.form)"/>
+            <input type="reset" value="Ulang" name="bilangan" />
+        </p>
+    </form>
+</body>
+</html>

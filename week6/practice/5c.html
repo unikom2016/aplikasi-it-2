@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>5c Latihan</title>
+</head>
+<body>
+	<form>
+    	<table border="1" align="center" width="70%">
+        	<tr>
+            	<td width="100%" colspan="2">
+                	<h2>Travelindo Abadi</h2>
+                </td>
+            </tr>
+            <tr>
+            	<td width="50%">
+                	<pre>
+                    	Nama : <input type="text" name="iname"/>
+                        Tujuan 		 : <select>
+                                            <option value="Jakarta">Jakarta</option>
+                                            <option value="Cirebon">Cirebon</option>
+                                            <option value="Banjar">Banjar</option>
+                                       </select>
+                        Jumlah Tiket : <input type="text" size="11" name="ijumlah"/>
+                        Status 		 :  <input type="radio" name="member" /> Member<br />
+ 		    						    <input type="radio" name="bukan_member" /> Bukan Member<br />            
+                    </pre>
+                </td>
+                <td width="50%">
+	                Harga Tiket : <input type="text" size="11" name="otiket"/>
+                    Sub Total 	: <input type="text" size="11" name="osub"/>
+                    Diskon 		: <input type="text" size="11" name="odiskon"/>
+                    Total Bayar : <input type="text" size="11" name="ototal"/>
+                </td>
+            </tr>
+            <tr>
+            	<td width="100%" colspan="2">
+                	<center>
+                        <input type="button" value="Hitung" onclick="hitungtotal(this.form)"/>
+                        <input type="reset" value="Ulang" />
+                	<center>
+                </td>
+            </tr>
+        </table>
+    </form>
+	<script language="javascript">
+		<!--
+		
+		function hitungtotal(form)
+		{
+			var nama = (form.iname.value);
+			var tujuan = (form.itujuan.value);
+			var jumlahtiket = parseFloat(form.ijumlah.value);
+			var ht = 0.0;
+			var sub = 0.0;
+			var diskon = 0.0;
+			var total = 0.0;
+			
+			if (tujuan == "Jakarta")
+			{
+				ht = 100000;
+			}
+			else if (tujuan == "Cirebon")
+			{
+				ht = 150000;
+			}
+			else
+			{
+				ht = 200000;
+			}
+			sub = jumlahtiket * ht;
+			
+			if (form.member.checked == true)
+			{
+				diskon = 0.10 * sub;
+			}
+			else
+			{
+				diskon = 0.0;
+			}
+			
+			total = sub - diskon;
+			form.otiket.value = eval(ht);
+			form.osub.value = eval(sub);
+			form.odiskon.value = eval(diskon);
+			form.ototal.value = eval(total);
+		}
+		// -->
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Latihan Dengan Objek Checkbox</title>
+</head>
+<body>
+	<script language="javascript">
+		<!--
+			function radio_box(form) {
+				var tim = ["arsenal", "Anda tidak memilih tim!"];	
+				if (form.arsenal.checked == true) { /* Wanita */
+					ket = "Wanita";
+				}
+				
+				/*if ( (form.arsenal.checked == false) && (form.mu.checked == false) )
+			}*/
+		-->
+	</script>
+	<form name="form3b">
+    	<h1>Memasukkan Data Dengan Objek Radio</h1>
+        <br />
+        <hr />
+        <input type="radio" name="pria" value="Pria"> Pria
+        <br />
+        <input type="radio" name="wanita" value="Wanita"> Wanita
+        <br />
+        <hr />
+    	<h2>Menggunakan Radio Group</h2>
+        <hr />
+        <p>Pilih nama kota :</p>
+        <p>
+        	<label>
+		        <input type="radio" id="id_padang" name="padang" value="Padang"> Padang
+            </label>
+            <br />
+			<label>
+		        <input type="radio" id="id_bandung" name="bandung" value="Bandung"> Bandung</label>
+            <br />
+        	<label>
+		        <input type="radio" id="id_yogyakarta" name="Yogyakarta" value="Yogyakarta"> Yogyakarta
+            </label>
+            <br />
+        	<label>
+		        <input type="radio" id="id_jakarta" name="jakarta" value="Jakarta"> Jakarta
+            </label>
+		</p>	
+        <p>
+        	<input type="button" value="Konfirmasi" onclick="radio_box(this.form)">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>

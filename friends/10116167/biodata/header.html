@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<style>
+			.nav{
+				text-decoration:none;
+				color:white;
+				font-size:20px;
+				background-color:red;
+				margin-left:17px;
+				padding:8px;
+				border-radius:10px;
+			}
+			.container{
+				background-color:black;
+				height:100%;
+				color:white;
+			}
+			h1{
+				padding-top:5px;
+			}
+			a:hover {
+				color:red;
+				border:1px solid red;
+				background-color:white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<center>
+				<div class="container">
+					<h1>Selamat datang di biodata saya</h1>
+					<div id="nav">
+					</div>
+				</div>
+			</center>
+		</div>
+        <script>
+			var menu = ["Home", "Biodata", "Contact"];
+			var linkMenu = ["main", "biodata", "hubungi"];
+		 	var nav  = document.getElementById("nav");
+			for(var i = 0; i < menu.length; i++){
+				var ele = document.createElement("a");
+				ele.setAttribute("href",linkMenu[i]+".html");
+				ele.setAttribute("target","main");
+				ele.setAttribute("class","nav");
+				ele.textContent = menu[i];
+				nav.appendChild(ele);
+			}
+		</script>
+	</body>
+</html>

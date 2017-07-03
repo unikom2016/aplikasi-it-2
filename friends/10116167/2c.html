@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Untitled Document</title>
+    </head>
+    
+    <body>
+ 		<form name="form">
+       		<h1>Silahkan Masukkan Bilangan Melalui Keyboard</h1>
+            <p>Bilangan Pertama            : <input type="text" size="5" name="bil1" /></p>
+            <p>Bilangan Kedua              : <input type="text" size="5" name="bil2" /></p>
+            <input type="button" value="Tambahkan" onclick="jumlah()" />
+            <input type="button" value="Kurangkan" onclick="kurang()" />
+            <input type="button" value="Kalikan" onclick="kali()" />
+            <input type="button" value="Bagikan" onclick="bagi()" />
+        </form>
+        <script>
+			var x, y;
+			function init(){
+				x = isNaN(document.form.bil1.value) ? 0.0 : parseFloat(document.form.bil1.value);
+				y = isNaN(document.form.bil2.value) ? 0.0 : parseFloat(document.form.bil2.value);	
+			}
+			function jumlah(){
+				init();
+				alert("Hasil Penjumlahan : " + (x + y)); 
+			}
+			function kurang(){
+				init();
+				alert("Hasil Penjumlahan : " + (x - y)); 
+			}
+			function kali(){
+				init();
+				alert("Hasil Penjumlahan : " + (x * y)); 
+			}
+			function bagi(){
+				init();
+				alert("Hasil Penjumlahan : " + (x / y)); 
+			}
+		</script>
+    </body>
+</html>
